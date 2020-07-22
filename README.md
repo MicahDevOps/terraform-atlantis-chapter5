@@ -37,7 +37,7 @@ wget https://github.com/runatlantis/atlantis/releases/download/v0.11.1/atlantis_
 #### This config applied on atlantis server ####
 repos:
 # Allow a specific repo to override.
-- id: https://github.com/AlibabaCloudIndonesia/terraform-atlantis-chapter5
+- id: github.com/AlibabaCloudIndonesia/terraform-atlantis-chapter5
   allowed_overrides: [workflow, apply_requirements]
   allow_custom_workflows: true
 ```
