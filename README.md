@@ -56,7 +56,7 @@ nohup ./atlantis server --atlantis-url=$URL \
 #### REPO_CONFIG: additional config for repository setting, in this case we use repo.yaml
 ```
 Make sure we've already export that all variable. See [Other Repository Integration Reference](https://www.runatlantis.io/docs/deployment.html#deployment-2).
-- After make sure Atlantis process already running, the expose via nginx, add this config nginx:
+- After make sure Atlantis process already running, then expose via nginx, add this config nginx:
 ```
     location / {
                     add_header Access-Control-Allow-Origin *;
@@ -110,5 +110,5 @@ See [Other Repository Integration Reference](https://www.runatlantis.io/docs/con
 - Once all expected and running well, ask approval.
 - After got 2 approval, comment PR: "atlantis apply -p [your-project-name]"
 - Atlantis will comment the output of the apply if its Done.
-- After you make sure all infrastructure its created well based on your code, you can merge it... <3
+- After you make sure all infrastructure its created well based on your code, you can merge it.
 ```
