@@ -10,7 +10,7 @@ This repository is for Demo simple Atlantis-Terraform Project
 
 ## Skipped Installation and setup
 - Install Terraform
-- Install nginx to expose endopint Atlantis UI via Http (OR can be replaced with SLB in ALibaba)
+- Install nginx to expose endpoint Atlantis UI via Http (OR can be replaced with SLB in ALibaba)
 
 ## Setup Step:
 
@@ -22,11 +22,11 @@ This repository is for Demo simple Atlantis-Terraform Project
 - Click Generate new token.
 - Select the scopes, or permissions, you'd like to grant this token.
 - Click Generate token.
-- Then coppy and safe to ur local the token that already generated before.
+- Then coppy and safe to your local the token that already generated before.
 
 See [Step Reference](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token).
 
-### 2. Setup Atlantis on Instances Terraform
+### 2. Setup Atlantis on Terraform Instances
 - Make directory /opt/terraform and /opt/terraform/atlantis-workdir
 - Inside dir /opt/terraform: 
 ```
@@ -63,7 +63,7 @@ Make sure we've already export that all variable. See [Other Repository Integrat
                     proxy_pass http://127.0.0.1:4141;
             }
 ```
-- Restart or reload nginx. (If u used SLB to expose the Atlantis backend you can skip this)
+- Restart or reload nginx. (If you used SLB to expose the Atlantis backend you can skip this)
 - Verify the Atlantis UI via browser. http://PUBLIC_IP_OR_INTERNAL_IP
 
 ### 3. Setting Repository Webhook
