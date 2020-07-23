@@ -1,0 +1,26 @@
+version: 3
+projects:
+### Example Project gatotkaca ####
+### all planned .tf files inside gatotkaca folder will deployed
+- name: demo-kubernetes
+  dir: demo-kubernetes
+  workspace: default
+  autoplan:
+    when_modified: ["*.tf"]
+    enabled: true
+  apply_requirements: [approved, mergeable]
+  workflow: default
+### Add another project bellow here ###
+
+workflows:
+### default workflow named as default ###
+  default:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-var-file", "../demo-alicloud.tfvars", -refresh=true]
+    apply:
+      steps:
+      - apply
+### create any specific workflow bellow this one if need another custom workflow ###
